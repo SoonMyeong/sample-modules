@@ -6,3 +6,5 @@ pluginManagement {
 rootProject.name = 'sample-modules'
 include 'presentation'
 include 'application'
+include 'domain'
+include 'infrastructure'
