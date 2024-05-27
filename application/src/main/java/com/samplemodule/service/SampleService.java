@@ -1,7 +1,7 @@
 package com.samplemodule.service;
 
-import com.samplemodule.entity.Sample;
-import com.samplemodule.repository.SampleRepository;
+import com.samplemodule.dto.SampleDto;
+import com.samplemodule.mapper.SampleMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class SampleService {
 
-    private final SampleRepository sampleRepository;
+    private final SampleMapper sampleMapper;
 
-    public String getGreeting() {
-        Sample sample = sampleRepository.findById(1).orElse(null);
+    public String getGreeting(Integer id) {
+        SampleDto sample = sampleMapper.findById(id);
         return sample == null ? "계정 없는 유저 Hi?" : sample.getUsername() + "님 Hello.";
     }
 }
