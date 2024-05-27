@@ -1,0 +1,10 @@
+plugins {
+    id 'war'
+}
+bootWar {
+    enabled = true
+}
+dependencies {
+    implementation project(":presentation")
+}
+

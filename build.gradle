@@ -28,7 +28,12 @@ subprojects {
     }
 
     dependencies {
+        implementation platform('org.springframework.boot:spring-boot-dependencies:3.3.0')
         implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:10.1.23'
+        implementation 'javax.servlet:jstl:1.2'
+        implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+        runtimeOnly 'com.h2database:h2:2.2.224'
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
